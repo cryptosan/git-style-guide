@@ -14,13 +14,13 @@ Kernel*](https://www.kernel.org/doc/Documentation/SubmittingPatches) 과
 
 # 목차
 
-1. [브런치 (Branches)](#브런치)
+1. [브랜치 (Branches)](#브랜치)
 2. [커밋 (Commits)](#커밋)
-  1. [메세지 (Messages)](#messages)
-3. [머지 (Merging)](#merging)
-4. [기타 (Misc.)](#misc)
+  1. [메세지 (Messages)](#메세지)
+3. [병합 (Merging)](#병합)
+4. [기타 (Misc.)](#기타)
 
-## 브런치 
+## 브랜치 
 
 * **짧고 이해하기 쉬운 이름**을 선택하세요.
 
@@ -43,7 +43,7 @@ Kernel*](https://www.kernel.org/doc/Documentation/SubmittingPatches) 과
 * 단어를 분리할 때 **대쉬**를 사용하세요.
 
 * 몇몇 사람들이 **같은 저장소**에서 작업하는 경우, **개인**과 **팀**은 
-  각각의 브런치를 가지도록 해야합니다.
+  각각의 브랜치를 가지도록 해야합니다.
   다음 네이밍을 참고하세요:
 
   ```shell
@@ -159,7 +159,7 @@ Kernel*](https://www.kernel.org/doc/Documentation/SubmittingPatches) 과
   *(Tip: Use the `--autosquash` flag when rebasing. The marked commits will be
   squashed automatically.)*
 
-## Merging
+## 병합
 
 * **Do not rewrite published history.** The repository's history is valuable in
   its own right and it is very important to be able to tell *what actually
@@ -208,7 +208,7 @@ Kernel*](https://www.kernel.org/doc/Documentation/SubmittingPatches) 과
   $ git merge my-branch
   ```
 
-## Misc.
+## 기타
 
 * There are various workflows and each one has its strengths and weaknesses.
   Whether a workflow fits your case, depends on the team, the project and your
@@ -236,7 +236,7 @@ Kernel*](https://www.kernel.org/doc/Documentation/SubmittingPatches) 과
   * [`git-prune(1)`](http://git-scm.com/docs/git-prune)
   * [`git-fsck(1)`](http://git-scm.com/docs/git-fsck)
 
-# License
+# 라이센스
 
 ![cc license](http://i.creativecommons.org/l/by/3.0/88x31.png)
 
@@ -247,6 +247,6 @@ International license.
 
 Agis Anastasopoulos / [@agisanast](https://twitter.com/agisanast) / http://agis.io
 
-# Translators
+# 번역
 
 Hyun Jun, An / [@cryptosdev](https://twitter.com/cryptosdev)
