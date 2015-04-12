@@ -1,35 +1,34 @@
 # Git Style Guide
 
-This is a Git Style Guide inspired by [*How to Get Your Change Into the Linux
-Kernel*](https://www.kernel.org/doc/Documentation/SubmittingPatches),
-the [git man pages](http://git-scm.com/doc) and various practices popular
-among the community.
+이 Git Style Guide는 [*How to Get Your Change Into the Linux 
+Kernel*](https://www.kernel.org/doc/Documentation/SubmittingPatches) 과 
+[git man pages](http://git-scm.com/doc), 그 커뮤니티에서 여러 유명한 
+문제들로 부터 영감을 얻었습니다.
 
-Translations of the guide are available in the following languages:
+이 가이드의 번역판은 다음과 같습니다.
 
 * [Chinese Simplified](https://github.com/aseaday/git-style-guide)
 * [Portuguese](https://github.com/guylhermetabosa/git-style-guide)
 
-If you feel like contributing, please do so! Fork the project and open a pull
-request.
+가이드에 참여하고 싶다면 프로젝트를 Fork하고 Pull Request 하세요.
 
-# Table of contents
+# 목차
 
-1. [Branches](#branches)
-2. [Commits](#commits)
-  1. [Messages](#messages)
-3. [Merging](#merging)
-4. [Misc.](#misc)
+1. [브런치 (Branches)](#브런치)
+2. [커밋 (Commits)](#커밋)
+  1. [메세지 (Messages)](#messages)
+3. [머지 (Merging)](#merging)
+4. [기타 (Misc.)](#misc)
 
-## Branches
+## 브런치 
 
-* Choose *short* and *descriptive* names:
+* **짧고 이해하기 쉬운 이름**을 선택하세요.
 
   ```shell
-  # good
+  # 좋음
   $ git checkout -b oauth-migration
 
-  # bad - too vague
+  # 나쁨
   $ git checkout -b login_fix
   ```
 
@@ -41,11 +40,11 @@ request.
   $ git checkout -b issue-15
   ```
 
-* Use *dashes* to separate words.
+* 단어를 분리할 때 **대쉬**를 사용하세요.
 
-* When several people are working on the *same* feature, it might be convenient
-  to have *personal* feature branches and a *team-wide* feature branch.
-  Use the following naming convention:
+* 몇몇 사람들이 **같은 저장소**에서 작업하는 경우, **개인**과 **팀**은 
+  각각의 브런치를 가지도록 해야합니다.
+  다음 네이밍을 참고하세요:
 
   ```shell
   $ git checkout -b feature-a/master # team-wide branch
@@ -66,31 +65,29 @@ request.
   $ git branch --merged | grep -v "\*"
   ```
 
-## Commits
+## 커밋
 
-* Each commit should be a single *logical change*. Don't make several
-  *logical changes* in one commit. For example, if a patch fixes a bug and
-  optimizes the performance of a feature, split it into two separate commits.
+* 각각의 커밋은 하나의 **논리적 변경**만 허용돼야 합니다. 하나의 커밋에서 여러 파일을  
+  변경하지 마세요. 예를 들어, 버그 패치나 성능 최적화 커밋은 분할되어야 합니다.
 
-* Don't split a single *logical change* into several commits. For example,
-  the implementation of a feature and the corresponding tests should be in the
-  same commit.
+* 하나의 **논리적 변경**을 여러개로 분산시키지 마세요. 예를 들어, 
+  기능 구현과 테스트는 하나의 커밋에서 처리되어야 합니다.
 
-* Commit *early* and *often*. Small, self-contained commits are easier to
-  understand and revert when something goes wrong.
+* **자주** 커밋하세요. 작고, 독립된 커밋들은 문제가 생겼을 때 이해하기 
+  쉽고 되돌리기 편합니다.
 
-* Commits should be ordered *logically*. For example, if *commit X* depends
-  on changes done in *commit Y*, then *commit Y* should come before *commit X*.
+* 커밋은 논리적으로 정렬 되어야 합니다. 예를 들어, **커밋 X**가 **커밋 Y**에 
+  의존하는 경우, **커밋 Y**가 **커밋 X**보다 선행되어야 합니다.
 
-### Messages
+### 메세지
 
-* Use the editor, not the terminal, when writing a commit message:
+* 커밋 메세지를 작성할 때, 터미널 대신 편집기를 사용하세요.:
 
   ```shell
-  # good
+  # 좋음
   $ git commit
 
-  # bad
+  # 나쁨
   $ git commit -m "Quick fix"
   ```
 
@@ -249,3 +246,7 @@ International license.
 # Credits
 
 Agis Anastasopoulos / [@agisanast](https://twitter.com/agisanast) / http://agis.io
+
+# Translators
+
+Hyun Jun, An / [@cryptosdev](https://twitter.com/cryptosdev)
